@@ -338,6 +338,8 @@ const DropdownComponent: <T>(
 
     const onSelect = useCallback(
       (item: any) => {
+        if (item.isDisabled) { return }
+        
         if (confirmSelectItem && onConfirmSelectItem) {
           return onConfirmSelectItem(item);
         }
