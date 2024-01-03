@@ -37,16 +37,16 @@ const SelectCountryComponent: <T>(
       ref.current.close();
     };
 
-    const _renderItem = (item: any) => {
-      return (
-        <View style={styles.item}>
-          <Image source={item[imageField]} style={[styles.image, imageStyle]} />
-          <Text style={[styles.selectedTextStyle, selectedTextStyle]}>
-            {item[labelField]}
-          </Text>
-        </View>
-      );
-    };
+    // const _renderItem = (item: any) => {
+    //   return (
+    //     <View style={styles.item}>
+    //       <Image source={item[imageField]} style={[styles.image, imageStyle]} />
+    //       <Text style={[styles.selectedTextStyle, selectedTextStyle]}>
+    //         {item[labelField]}
+    //       </Text>
+    //     </View>
+    //   );
+    // };
 
     const selectItem: any = useMemo(() => {
       const index = data.findIndex((e: any) => e[valueField] === value);
@@ -57,7 +57,7 @@ const SelectCountryComponent: <T>(
       <Dropdown
         ref={ref}
         {...props}
-        renderItem={_renderItem}
+        // renderItem={_renderItem}
         renderLeftIcon={() => {
           if (selectItem?.image) {
             return (
