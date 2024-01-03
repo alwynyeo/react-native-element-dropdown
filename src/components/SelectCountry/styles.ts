@@ -15,10 +15,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 20,
-    height: 20,
-    marginRight: 3,
-    marginVertical: 4,
+    // width: 20,
+    // height: 20,
+    // marginRight: 3,
+    // marginVertical: 4,
+    width: 24,
+    height: 24,
+    marginRight: 8,
   },
   selectedTextStyle: {
     flex: 1,
