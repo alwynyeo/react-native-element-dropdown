@@ -60,12 +60,16 @@ const SelectCountryComponent: <T>(
         // renderItem={_renderItem}
         renderLeftIcon={() => {
           if (selectItem?.image) {
-            return (
-              <Image
-                source={selectItem.image}
-                style={[styles.image, imageStyle]}
-              />
-            );
+            if (imageField === "") {
+              return null
+            } else {
+              return (
+                <Image
+                  source={selectItem.image}
+                  style={[styles.image, imageStyle]}
+                />
+              );
+            }
           } else {
             return null;
           }
